@@ -80,7 +80,7 @@ int wmain(int argc, wchar_t* wargv[]) {
 #else
 #define Elf_auxv_t Elf32_auxv_t
 #endif  // __LP64__
-extern char** environ;
+extern "C" char** environ;
 #endif  // __linux__
 #if defined(__POSIX__) && defined(NODE_SHARED_MODE)
 #include <string.h>
